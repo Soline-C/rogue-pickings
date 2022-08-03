@@ -125,16 +125,17 @@ header nav ul li a{
 .section-one,
 .section-two,
 .section-three {
-	width: 90%;
+	width: 100%;
+	padding: 0 2%;
 	border-top: 1px solid #eee;
 }
 
 .section-one h3 {
 	padding: 10px 0;
+	margin: 0;
 }
 
 .section-two {
-	
 	width: 100%;
 }
 
@@ -178,4 +179,35 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+@media all and (min-width:768px) {
+    /* Tablet styles here */
+
+.bottom-section{
+	display: flex;
+	flex-flow: nowrap;
+	margin: 30px 0;
+}
+.section-two {
+	border-right:1px solid #eee;
+	border-left:1px solid #eee;
+}
+}
+
+@media all and (min-width:1200px) {
+    /* Desktop styles here */
+header {	
+	display: flex;
+	flex-flow: nowrap;
+	}
+header nav ul {
+	display: flex;
+	flex-direction: row;	
+	}
+header h1 {
+    width: 600px;
+    padding: 38px 30px 30px 0px;
+    border-bottom: 0px ;
+  }
 }
