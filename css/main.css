@@ -1,213 +1,674 @@
-html {
-    font-size:16px;
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  /*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Vendor-prefixed and regular ::selection selectors cannot be combined:
+   * https://stackoverflow.com/a/16982510/7133471
+   *
+   * Customize the background color to match your design.
+   */
+  
+  ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  /*
+   * A better looking default horizontal rule
+   */
+  
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+  
+  /*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+  
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+  
+  /*
+   * Remove default fieldset styles.
+   */
+  
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*
+   * Allow only vertical resizing of textareas.
+   */
+  
+  textarea {
+    resize: vertical;
+  }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* HEADER */
+
+body{
+  background-color: #ded6d6;
+  font-family:'Montserrat', sans-serif;
+  color: #5e6164;
 }
 
-body {
-	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-size:1em;
+header {
+  background: url("../img/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 400px; 
+  margin: 0;
+}
+.logo {
+  color: #0e3b43;
+  margin-right: 0;
+  float: left;
+}
+.cabinet {
+  margin: 0 0;
+  font-weight: bolder;
+  font-size: 10px;
+  width: 50px;
+  float: left;
+}
+.naturo {
+  width: 50px;
+  font-weight: bolder;
+  font-size: 10px;
+  float: left;
+  margin: 0;
+}
+.thérapie {
+  width: 50px;
+  font-weight: bolder;
+  font-size: 10px;
+  float: left;
+  margin: 0;
+}
+.paris{
+  color: #ef5d60;
+  margin: 2px 0;
+  font-size: 8px;
+  float: left;
+  width: 50px;
+  font-weight: bold;
+} 
+.menu{
+  float: right;
+  font-size: 14px;
+} 
+ul {
+  float: right; 
+  padding-left: 5px;
+}
+ nav ul li{
+  display: inline-block;
+  margin-right: 10px;
+  padding-right: 10px;
+  font-weight: 1000;
+  border-right:3px solid #ef5d60; 
+}  
+nav ul li a{
+  text-decoration: none;
+  color: #0e3b43;
+}  
+a {
+  box-shadow: inset 0 0 0 0 #ef5d60;
+  color: #ef5d60;
+  margin: 0 -.60rem;
+  padding: 0 .60rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+a:hover {
+  box-shadow: inset 150px 0 0 0 #ef5d60;
+  color: white;
+}
+header h1{
+  font-family:'La Belle Aurore', cursive;
+  color: #a6b6bf;
+  font-size: 40px;
+  font-weight: 900;
+  position: absolute; top :90px;
+  text-align: center;
+  color: #0e3b43;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
 }
 
-.container{
-	max-width: 1200px;
-	width: 90%;
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: row wrap; 
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-h1,
-h2,
-h3 {
-	color: black;
-	text-transform: uppercase;
-	font-weight: 700;
-}
-h1 {
-	font-size: 1.875em;
-}
-h2 {
-	font-size: 1.125em;
-}
-h3 {
-	font-size: 0.75em;
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-p {
-	font-size: 0.875em;
-	
-    padding: 0 30px;
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-/*The widths are in a percentage!*/
-header {	
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-header h1 {
-	border-bottom: 3px solid #77a466;
-	margin: 0;
-	padding: 38px 30px 15px 30px;
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.rdv{
+color: white;
+text-decoration: none;
+font-weight: bold;
+background-color: #ef5d60;
+padding:10px;
+border-radius: 10px;
+transition: all 0.2s ease-in-out;
+}
+.glow:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px #ef5d60;
+}
+a.rdv.glow{
+  margin-left: 20%;
+}
+/* MAIN */
+
+ h1, h2{
+  font-family: 'Libre Bodoni', serif;
+  color: #0e3b43;
+}
+h3{
+  font-family: 'Libre Bodoni', serif;
+  color: #ef5d60;
+}
+.bio {
+  margin: 5%;
+}
+.bio img {
+  height: 160px;
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
-header h1 span {
-	color: #77a466;
+#poppy{
+  margin-left: 5%;
+  height: 200px;
+}
+.texte{
+  margin-left: 5%;
+}
+.consulter h2{
+  text-decoration: underline;
 }
 
-header nav {
-	padding: 10px 0;
-	
+#naturotherapies{
+  margin-left: 5%;
+  font-size: 20px;
 }
-header nav ul {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+#naturotherapies h1{
+  margin-left: 5%;
+  font-size: 50px;
+}
+#sea{
+  height: 500px;
+  margin-left: 5%;
+  margin-bottom: 20px;
+}
+/* FOOTER */
+footer{
+  background-color: #a6b6bf;
+  width: 100%;
+}
+#rdv{
+  margin-top: 5px;
+  text-align: center;
+}
+#rdv h1{
+  margin-left: 5%;
+}
+#rdv h2{
+  color: #5e6164;
+}
+.france, .houria{
+  color: #0e3b43;
+  font-size: 20px;
+}
+.adresse{
+  margin-bottom: 5px;
+}
+.tarifs{
+  padding-bottom: 40px;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
 }
 
-header nav ul li {
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 0.875em;
-	padding: 15px;
-	display: flex;
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
 }
 
-header nav ul li a{
-	text-decoration: none;
-	color:#77a466;
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
 }
 
-/*The widths are in a percentage!*/
-.top-section
-{
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
 }
 
-.main-image{
-	display: flex;
-	justify-content:center;
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
 }
 
-.main-image img {
-	width: 100%;
-	border-bottom: 3px solid #77a466;
-	border-top: 3px solid #77a466;
+.clearfix::after {
+  clear: both;
 }
 
-.main-title h2 {
-	text-align: left;
-	padding: 5px 0;
-	color: #77a466;
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports that meet the condition*/
+     /* HEADER */
+
+header {
+  height: 700px; 
 }
-.main-title p {
-	padding: 0;
-	font-size: 1em;
+.logo {
+  width: 320px;
+}
+.cabinet {
+  margin: 0 20px;
+  font-weight: bolder;
+  font-size: larger;
+  width: 300px;
+}
+.naturo {
+  margin: 0 60px;
+  font-weight: bolder;
+  font-size: larger;
+}
+.thérapie {
+  margin: 0 100px;
+  font-weight: bolder;
+  font-size: larger;
+}
+.paris{
+  margin: 0 110px;
+  font-size: 12px;
+  width: fit-content;
+} 
+
+header h1{
+  font-size: 65px;
+  font-weight: 900;
+  position: absolute; top :180px;
+}
+.rdv{
+  position: absolute; top :600px;
 }
 
-.bottom-section {
-	margin: 0 auto;
-	display: flex;
-	flex-flow: column wrap;
+/* MAIN */
+
+  #about h1{
+  padding-left: 250px;
+}
+.bio {
+  float: left;
+  margin:1% 1% 1% 15%;
+}
+.bio img {
+  width: 160px;
+  height: 160px;
+  float: left;
+  margin-top: 70px;
+  margin-right: 20px;
+}
+.consulter, #rdv{
+  float: left;
+}
+.consulter{
+  width: 600px;
+  margin: 50px 0 95px 100px;
+  position: relative;
+}
+.texte{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-52%, -6%);
 }
 
-.section-one,
-.section-two,
-.section-three {
-	width: 100%;
-	padding: 0 2%;
-	border-top: 1px solid #eee;
+#naturotherapies{
+  float: left;
+  margin: 100px 100px 0 100px;
+  font-size: 20px;
+  line-height: 30px;
 }
+#naturotherapies h2{
+padding-top: 50px;
+}
+#sea{
+  width: 600px;
+  height: 1000px;
+  float: left;
+  margin: 10px 50px 0 90px;
+}
+/* FOOTER */
 
-.section-one h3 {
-	padding: 10px 0;
-	margin: 0;
+#rdv{
+  margin-top: 50px;
+  text-align: center;
 }
-
-.section-two {
-	width: 100%;
+#rdv h2{
+  margin-left: 30px;
 }
-
-.section-two h3
-.section-three h3 {
-	padding: 10px 0;
-	
+.france{ 
+  float: left;
+  padding-left: 150px;
 }
-
-.menu {
-	list-style: none;
-	padding: 0;
+.houria{ 
+  float: left;
+  padding-left: 175px;
 }
-.menu li {
-	padding: 10px 0;
-	color:#77a466;
+.adresse{
+  float: left;
+  margin-left: 310px;
+  margin-bottom: 20px;
 }
-
-p.reviews {
-	color: #333;
-	font-size: 1em;
-	padding: 10px 0;
-}
-
-p.address {
-	font-size: 1em;
-	padding: 10px 0;
-}
-
-/*The widths are in a percentage!*/
-footer {
-	
-	border-top: 3px solid #eee;
-	margin: 0 auto;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-}
-footer span {
-	font-family: 'Galada', cursive;
-	text-transform: lowercase;
-	color: #77a466;
-	font-size: 0.875em;
-}
-
-@media all and (min-width:768px) {
-    /* Tablet styles here */
-
-.bottom-section{
-	display: flex;
-	flex-flow: nowrap;
-	margin: 30px 0;
-}
-.section-two {
-	border-right:1px solid #eee;
-	border-left:1px solid #eee;
+.tarifs{
+  float: left;
+  margin-bottom: 50px;
+  margin-left: 210px;
 }
 }
 
-@media all and (min-width:1200px) {
-    /* Desktop styles here */
-header {	
-	display: flex;
-	flex-flow: nowrap;
-	}
-header nav ul {
-	display: flex;
-	flex-direction: row;	
-	}
-header h1 {
-    width: 600px;
-    padding: 38px 30px 30px 0px;
-    border-bottom: 0px ;
+@media only screen and (min-width: 1200px) {
+  /* Style adjustments for viewports that meet the condition*/
+
+header {
+  height: 800px; 
+  width: 100%;
+}
+.logo {
+  width: 400px;
+  font-size: 20px;
+}
+.paris{
+  font-size: 15px;
+  margin-left: 140px;
+  font-weight:bold;
+}
+header h1{
+  font-weight: 600;
+  position: absolute; top :220px;
+  margin-left: 18%;
+  width: 1000px;
+}
+.rdv{
+  position: absolute; top :600px;
+}
+
+/* MAIN */
+#about h1{
+  margin-left: 25%;
+}
+.bio {
+  width: 500px;
+  float: left;
+  margin-left: 12%;
+  justify-content: center;
+}
+
+.consulter{
+  width: 800px;
+  margin: 50px 0 110px 400px;
+}
+.texte{
+  transform: translate(-69%, -15%);
+}
+
+#naturotherapies{
+  float: left;
+  width: 600px;
+  margin-top: 80px;
+  line-height: 35px;
+}
+#naturotherapies h2{
+  margin: 0px;
+  padding: 0;
+}
+#naturotherapies2{
+  float: left;
+  width: 700px;
+  margin-top: 70px;
+  font-size: 20px;
+  padding: -10px 0 0 0;
+}
+#naturotherapies2 h2{
+  margin: 0px;
+  padding:7px 0 0 0;
+
+}
+#sea{
+  width: 90%;
+  height: 700px;
+  margin-left: 5%;
+  margin-bottom: 50px;
+  
+}
+/* FOOTER */
+
+#rdv h2{
+  margin-left: 5%;
+}
+.france{
+  float: left;
+  padding-left: 19%;
+}
+.houria{
+  float: left;
+  padding-left: 50px;
+}
+.adresse{
+  padding-left: 370px;
+}
+.tarifs{
+  margin-top: 100px;
+  margin-left: -280px;
+}
+}
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+} */
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
   }
 }
+
